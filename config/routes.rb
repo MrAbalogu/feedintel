@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 
   root to: 'pages#index' 
+
+  get 'logout', to: 'users#logout', as: 'logout'
   
   get 'pages/index'
 

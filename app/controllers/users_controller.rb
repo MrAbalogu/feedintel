@@ -25,6 +25,11 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
+  def logout
+    session.destroy
+    redirect_to root_path
+  end
+
   def update
     @user = User.find(params[:id])
     # authorize @user

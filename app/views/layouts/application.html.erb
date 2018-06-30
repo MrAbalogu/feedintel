@@ -128,22 +128,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </a>
                     </li>
                     <li class="nav-item">
-                      <a href="<%=destroy_user_session_path%>" class="nav-link" data-toggle="dropdown">
-                          <i class="material-icons">power</i> Logout
-                      </a>
+
+
+                    	<%= link_to "<i class='material-icons'>power</i>Logout".html_safe, logout_path, class: 'nav-link' %>
+                    
                      
                     </li>
                   <% else %>
                      <li class="nav-item">
-                      <a href="<%=new_user_session_path%>" class="nav-link" data-toggle="dropdown">
+                      <a href="<%=new_user_session_path%>" class="nav-link" data-disable-with="processing ...">
                           <i class="material-icons">power</i> Login
                       </a>
                      
                     </li>
 
                   
-                    <li class="button-container nav-item iframe-extern">
-                        <a href="<%=new_user_registration_path%>" class="btn  btn-rose   btn-round btn-block">
+                    <li class="button-container nav-item">
+                        <a href="<%=new_user_registration_path%>" class="btn  btn-rose   btn-round btn-block" data-disable-with="Processing...">
                             <i class="material-icons"></i> Join Now
                         </a>
                     </li>
