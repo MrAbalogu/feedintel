@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
 
   def index
+    @report = Report.new
+    @report_categories = ReportCategory.all
   end
 
   def about
