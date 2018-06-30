@@ -1,0 +1,150 @@
+
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-10 ml-auto mr-auto">
+      <div class="card card-signup">
+        <h2 class="card-title text-center">Register</h2>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-5 ml-auto">
+              <div class="info info-horizontal">
+                <div class="icon icon-rose">
+                  <i class="material-icons">group</i>
+                </div>
+                <div class="description">
+                  <h4 class="info-title">Users & Security Agents</h4>
+                  <p class="description">
+                    FeedIntel is designed for use by individual|group reporters and security agencies for real time analysis and prevention of violence and extremism 
+                  </p>
+                </div>
+              </div>
+
+              <div class="info info-horizontal">
+                <div class="icon icon-primary">
+                  <i class="material-icons">timeline</i>
+                </div>
+                <div class="description">
+                  <h4 class="info-title">Reporting</h4>
+                  <p class="description">
+                     Reports can be shared by users/groups. Submitted reports are immediately posted on the RealTime Timelines and shared with security agents for viewing, assessment and response.
+
+
+                  </p>
+                </div>
+              </div>
+
+              <div class="info info-horizontal">
+                <div class="icon icon-info">
+                  <i class="material-icons">code</i>
+                </div>
+                <div class="description">
+                  <h4 class="info-title">Intelligence Gathering</h4>
+                  <p class="description">
+                   Our AI Intelligently learns from all intelligent data gathered to provide, analysis and prevention of violent extremism and occurences in the future
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-5 mr-auto">
+              <div class="social text-center">
+                <button class="btn btn-just-icon btn-round btn-twitter">
+                  <i class="fa fa-twitter"></i>
+                </button>
+                <button class="btn btn-just-icon btn-round btn-dribbble">
+                  <i class="fa fa-dribbble"></i>
+                </button>
+                <button class="btn btn-just-icon btn-round btn-facebook">
+                  <i class="fa fa-facebook"> </i>
+                </button>
+                <h4> or be Thoughful </h4>
+              </div>
+
+            
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), class: 'form') do |f| %>
+  <%= devise_error_messages! %>
+
+               
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                          <i class="material-icons">mail</i>
+                      </span>
+                    </div>
+                      <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email' %>
+                  </div>
+                </div>
+
+                 <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                          <i class="material-icons">face</i>
+                      </span>
+                    </div>
+                     <%= f.text_field :fullname, class: 'form-control', placeholder: 'FullName' %>
+                   
+                  </div>
+                </div>
+
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                          <i class="material-icons">lock_outline</i>
+                      </span>
+                    </div>
+
+                     <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Password' %>
+                   
+                  </div>
+                </div>
+
+                  <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                          <i class="material-icons">lock_outline</i>
+                      </span>
+                    </div>
+
+                     <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Confirm Password' %>
+                   
+                  </div>
+                </div>
+
+                 <br/>
+
+
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="" checked>
+                    <span class="form-check-sign">
+                      <span class="check"></span>
+                    </span>
+                    I agree to the <a href="#terms">terms and conditions</a>.
+                  </label>
+                </div>
+                <br/>
+                <div class="text-center">
+                   <%= f.button "Get Started", type: 'submit', class: 'btn btn-primary btn-round', data: {data_disable: "<i class='fa fa-spinner fa-spin'> </i> We are setting up your account "} %>
+
+                   <br/>
+
+                <%= render "devise/shared/links" %>
+                </div>
+            <% end %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+            </div>
+        </div>
+  </div>
+
+
+
