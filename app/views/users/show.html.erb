@@ -1,0 +1,13 @@
+<% if signed_in? %>
+
+<%= current_user.email %>
+
+<%= link_to(("<i class='fa fa-sign-out'></i> Logout").html_safe, destroy_user_session_path, method: :delete, class: 'dropdown-item') %>  
+
+<p>
+	<a href="/reports/new">Add new report</a>
+</p>
+
+<% else %>
+  <a href="/users/sign_in">Login</a>
+<% end %>
