@@ -6,6 +6,7 @@
   <head>
     <title>Feedintel</title>
     <%= csrf_meta_tags %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 
 <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
@@ -110,10 +111,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <a href="../sections.html#headers" class="dropdown-item">
                         <i class="material-icons">dns</i> view Reports
                     </a>
-                    <a href="../sections.html#features" class="dropdown-item">
-                        <i class="material-icons">build</i> submit Intel
+
+                    <a href="#" class="dropdown-item" data-toggle="modal" data-target="#reportsModal">
+                        <i class="material-icons">add_circle</i> submit Intel
                     </a>
-                    <a href="../sections.html#blogs" class="dropdown-item">
+                    <a href="#" class="dropdown-item">
                         <i class="material-icons">list</i> Maps 
                     </a>
                    
@@ -158,6 +160,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </nav>
 
 
+
+
+
+
         
         
   <%= yield %>
@@ -194,7 +200,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <script>
             document.write(new Date().getFullYear())
         </script>, built with <i class="material-icons">favorite</i> in
-        <a href="#" target="_blank">NAN</a> hackathon.
+        <a href="#" target="_blank">#NotAnotherNigerian</a> hackathon.
     </div>
   </div>
 </footer>

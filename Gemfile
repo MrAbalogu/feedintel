@@ -35,6 +35,13 @@ gem 'figaro'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'carrierwave'
+gem 'mini_magick', '~> 4.3'
+
+# Dragonfly and Avatar Magick
+gem 'dragonfly', '~> 1.0.11'
+gem 'avatar_magick', '~> 1.0.1'
+
 group :production do
   gem 'rails_12factor', '0.0.2'
   gem 'pg'
