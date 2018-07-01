@@ -74,6 +74,8 @@
                       </span>
                     </div>
                       <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email' %>
+
+                      <%= f.hidden_field :role, value: 'reporter' %>
                   </div>
                 </div>
 
@@ -130,7 +132,7 @@
                 </div>
                 <br/>
                 <div class="text-center">
-                   <%= f.button "Get Started", type: 'submit', class: 'btn btn-primary btn-round', data: {data_disable: "<i class='fa fa-spinner fa-spin'> </i> We are setting up your account "} %>
+                   <%= f.button "Get Started", type: 'submit', class: 'btn btn-primary btn-round', 'data-disable-with': 'We are setting up your account' %>
 
                    <br/>
 

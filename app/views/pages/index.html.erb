@@ -65,6 +65,10 @@
 					</select>
 				</div>
 
+
+
+				
+
 				  
 				    <%= f.text_field :title, class: 'form-control', placeholder: 'Enter a Title for this Report' %> <br/>
 			
@@ -75,17 +79,35 @@
 
 					<div class="form-group">
 
-							 <div class="input-group">
-							   
-							    <%= f.text_field :location, class: 'form-control', placeholder: 'Location'  %>
-							     <div class="input-group-prepend">
+						<div class="row">
+							<div class="col">
 
-							      <span class="input-group-text">
-							        <i class="fa fa-map"></i>
-							      </span>
-							    </div>
+								   <div class="form-group">
+								   	 
+								   <select class="selectpicker" name="report[:location]" data-style="select-with-transition" title="Location" data-size="10" >
+									   	
+									    <option disabled>Choose Location</option>
+									    
+									    <option value="Benue">Benue</option>
+									     <option value="Adamawa">Borno</option>
+									      <option value="Plateau">Plateau</option>
+									       <option value="Gombe">Gombe</option>
+
+									  
+
+									</select>
+								</div>
 							
+							 </div>
+							 <div class="col">
+
+							 	<div class="form-group">
+				 
+							    <%= f.text_field :landmark, class: 'form-control', placeholder: 'Physical Address or  Landmark  '  %>
 							  </div>
+							 </div>
+						</div>	
+
 					</div>
 
 				    
@@ -102,10 +124,7 @@
 					    </div>
 					  </div>
 
-				  <div class="form-group">
-				 
-				    <%= f.text_field :landmark, class: 'form-control', placeholder: 'Any Landmark or Description? '  %>
-				  </div>
+				  
 
 			</div>
 		</div>

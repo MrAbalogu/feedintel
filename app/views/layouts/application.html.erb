@@ -107,26 +107,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                       <i class="material-icons">view_day</i> Reporting
                   </a>
-                  <div class="dropdown-menu dropdown-with-icons">
-                    <a href="../sections.html#headers" class="dropdown-item">
-                        <i class="material-icons">dns</i> view Reports
-                    </a>
 
-                    <a href="#" class="dropdown-item" data-toggle="modal" data-target="#reportsModal">
-                        <i class="material-icons">add_circle</i> submit Intel
-                    </a>
-                    <a href="#" class="dropdown-item">
-                        <i class="material-icons">list</i> Maps 
-                    </a>
+                 
+                  <div class="dropdown-menu dropdown-with-icons">
+
+                  	 <% if user_signed_in? %>
+
+	                    <a href="<%=dashboard_path%>" class="dropdown-item">
+	                        <i class="material-icons">dns</i> Dashboard
+	                    </a>
+
+
+	                    <a href="#" class="dropdown-item" data-toggle="modal" data-target="#reportsModal">
+	                        <i class="material-icons">add_circle</i> submit Intel
+	                    </a>
+	                    <a href="#" class="dropdown-item">
+	                        <i class="material-icons">list</i> Maps 
+	                    </a>
                    
+                     <% else %>
+
+                     <a href="#" class="dropdown-item">
+	                        <i class="material-icons">list</i> Maps 
+	                    </a>
+
+
+                   	 <% end %>
+
+
                    
                   </div>
+
+                 
+
 
                    </li>
                   <% if signed_in? %>
                     <li class="button-container nav-item iframe-extern">
                         <a href="<%= user_path(current_user) %>" class="btn  btn-rose   btn-round btn-block">
-                            <i class="material-icons"></i> Welcome <%= current_user.email%>
+                            <i class="material-icons"></i> Welcome <%= current_user.fullname.split(" ").first%>.<%=current_user.fullname.split(" ").second.chr %>
                         </a>
                     </li>
                     <li class="nav-item">
