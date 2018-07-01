@@ -7,10 +7,11 @@ class User < ApplicationRecord
 extend Dragonfly::Model
  
  include Avatarable
- 
+
   mount_uploader :photo, PhotoUploader
 
 
+  has_many :reports
 
 
   def full_name

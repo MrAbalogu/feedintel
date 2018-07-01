@@ -1,6 +1,7 @@
 class ReportsController < ApplicationController
   before_action :set_report, only: [:show, :edit, :update, :destroy]
 
+  before_action :authenticate_user!, only: [:new, :create, :update]
   # GET /reports
   # GET /reports.json
 
@@ -28,6 +29,9 @@ class ReportsController < ApplicationController
   # POST /reports.json
   def create
     @report = Report.new(report_params)
+
+    @report.user_id = current_user.id
+
 
     respond_to do |format|
       if @report.save
@@ -72,6 +76,6 @@ class ReportsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def report_params
-      params.require(:report).permit(:title, :description, :report_category_id, :location, :landmark)
+      params.require(:report).permit(:title, :description, :user_id, :report_category_id, :location, :landmark)
     end
 end
