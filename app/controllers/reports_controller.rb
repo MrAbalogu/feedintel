@@ -3,6 +3,9 @@ class ReportsController < ApplicationController
 
   # GET /reports
   # GET /reports.json
+
+  layout 'rep'
+  
   def index
     @reports = Report.all
   end

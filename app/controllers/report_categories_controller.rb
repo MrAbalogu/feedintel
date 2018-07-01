@@ -3,6 +3,9 @@ class ReportCategoriesController < ApplicationController
 
   # GET /report_categories
   # GET /report_categories.json
+
+  layout 'rep'
+  
   def index
     @report_categories = ReportCategory.all
   end
