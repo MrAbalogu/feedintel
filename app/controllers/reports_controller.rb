@@ -3,6 +3,9 @@ class ReportsController < ApplicationController
 
   # GET /reports
   # GET /reports.json
+
+  layout 'rep'
+  
   def index
     @reports = Report.all
   end
@@ -28,10 +31,10 @@ class ReportsController < ApplicationController
 
     respond_to do |format|
       if @report.save
-        format.html { redirect_to @report, notice: 'Report was successfully created.' }
-        format.json { render :show, status: :created, location: @report }
+        format.html { redirect_to root_path, notice: 'Report was successfully created.' }
+        format.js
       else
-        format.html { render :new }
+        format.html { redirect_to :root_path }
         format.json { render json: @report.errors, status: :unprocessable_entity }
       end
     end

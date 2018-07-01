@@ -25,6 +25,11 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
+  def logout
+    session.destroy
+    redirect_to root_path
+  end
+
   def update
     @user = User.find(params[:id])
     # authorize @user
@@ -44,7 +49,7 @@ class UsersController < ApplicationController
   private
 
   def secure_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :role, :fullname )
+    params.require(:user).permit(:email, :password, :password_confirmation, :role, :fullname, :photo )
   end
 
 end
