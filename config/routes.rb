@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :aminas
+  namespace :api, defaults: {format: 'json'} do
+    scope :v1 do
+      resources :reports
+      resources :aminas
+    end
+  end 
 
   root to: 'pages#index' 
   

@@ -1,0 +1,22 @@
+<%= form_for(amina) do |f| %>
+  <% if amina.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(amina.errors.count, "error") %> prohibited this amina from being saved:</h2>
+
+      <ul>
+      <% amina.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

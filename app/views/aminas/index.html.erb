@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Aminas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aminas.each do |amina| %>
+      <tr>
+        <td><%= amina.email %></td>
+        <td><%= link_to 'Show', amina %></td>
+        <td><%= link_to 'Edit', edit_amina_path(amina) %></td>
+        <td><%= link_to 'Destroy', amina, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Amina', new_amina_path %>
